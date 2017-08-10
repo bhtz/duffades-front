@@ -3,7 +3,7 @@ import { FormComponent } from './components/form/form.component';
 
 
 
-export const homeRoutes = [
+export const duffadesRoutes = [
     { component: ListComponent, name: 'Duffades', segment: 'duffades' },
     { component: FormComponent, name: 'Form', segment: 'form' }    
 ];
