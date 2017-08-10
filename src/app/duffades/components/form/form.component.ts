@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Duffade } from "app/duffades/models/user";
+var Parse = require('parse');
 
 
 @Component({
@@ -9,7 +10,7 @@ import { Duffade } from "app/duffades/models/user";
 })
 export class FormComponent implements OnInit {
 
-  duffade:Duffade;
+  duffade: Duffade;
 
   constructor() { }
 
@@ -18,8 +19,14 @@ export class FormComponent implements OnInit {
   }
 
 
-  onSubmit(){
+  onSubmit() {
+    var self = this;
+    var duffade = new Parse.Object('Duffade');
+    duffade.set("title", this.duffade.title);
+    duffade.set("description", this.duffade.description);
 
+
+    duffade.save().then(() => alert('save'));
   }
 
 }

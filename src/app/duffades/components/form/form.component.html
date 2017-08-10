@@ -13,11 +13,11 @@
     <form novalidate ng-submit="onSubmit()">
 
       <ion-item>
-        <ion-input type="text" placeholder="Titre" [(ngModel)]="duffade.title" required></ion-input>
+        <ion-input name="title" type="text" placeholder="Titre" [(ngModel)]="duffade.title"  required></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-input type="text" placeholder="Description" [(ngModel)]="duffade.description" required></ion-input>
+        <ion-input name="description" type="text" placeholder="Description" [(ngModel)]="duffade.description" required></ion-input>
       </ion-item>
 
       <button type="file" ion-button color="secondary">Photo</button>
