@@ -15,24 +15,21 @@ export class AppComponent {
 
   @ViewChild(Nav) nav: Nav;
   rootPage: any = HomeComponent;
-  pages: Array<{ title: string, component: any }>;
-  test: Array<any>;
+  pages: Array<any>;
+  connectedUsername: string = '';
 
   constructor(public platform: Platform) {
-
-    this.test = appRoutes;
-
-    this.pages = [
-      { title: 'Home', component: HomeComponent },
-      { title: 'About', component: AboutComponent }
-    ];
-
+    this.pages = appRoutes;
     this.initializeApp();
   }
 
   initializeApp() {
     Parse.initialize("duffade");
     Parse.serverURL = 'https://duffades.herokuapp.com/parse';
+
+    if(Parse.User.current()){
+      this.connectedUsername = Parse.User.current().get('username');
+    }
 
     this.platform.ready().then(() => {
       StatusBar.styleDefault();
@@ -42,5 +39,11 @@ export class AppComponent {
 
   openPage(page: any) {
     this.nav.setRoot(page.component);
+  }
+
+  logout() {
+    Parse.User.logOut().then(() => {
+      alert('you disconnected');
+    });
   }
 }
