@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Duffade } from "app/duffades/models/user";
 
 @Component({
   selector: 'app-form',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
+  duffade:Duffade;
+
   constructor() { }
 
   ngOnInit() {
+    this.duffade = new Duffade();
+  }
+
+
+  onSubmit(){
+
   }
 
 }
