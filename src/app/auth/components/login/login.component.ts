@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+var Parse = require('parse');
 
 @Component({
   selector: 'app-login',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
+  username: string = '';
+  password: string = '';
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onLogin() {
+    Parse.User.logIn(this.username, this.password, {
+      success: function (user) {
+        alert('welcome: ' + user.get('username'));
+      },
+      error: function (user, error) {
+        alert(error.message);
+      }
+    });
   }
 
 }

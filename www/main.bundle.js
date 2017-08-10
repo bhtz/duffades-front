@@ -57,7 +57,7 @@ var AuthModule = (function () {
 /***/ "../../../../../src/app/auth/components/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-navbar color=\"primary\">\n    <button ion-button menuToggle>\n      <ion-icon name=\"menu\"></ion-icon>\n    </button>\n    <ion-title>Login</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding text-center>\n\n</ion-content>"
+module.exports = "<ion-header>\n  <ion-navbar color=\"primary\">\n    <button ion-button menuToggle>\n      <ion-icon name=\"menu\"></ion-icon>\n    </button>\n    <ion-title>Login</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding text-center>\n\n  <ion-list>\n    <ion-item>\n      <ion-label floating>Username</ion-label>\n      <ion-input type=\"text\" [(ngModel)]=\"username\"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Password</ion-label>\n      <ion-input type=\"password\" [(ngModel)]=\"password\"></ion-input>\n    </ion-item>\n\n    <br>\n    <button (click)=\"onLogin()\" ion-button outline block>Login</button>\n  </ion-list>\n\n</ion-content>"
 
 /***/ }),
 
@@ -95,10 +95,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+var Parse = __webpack_require__("../../../../parse/index.js");
 var LoginComponent = (function () {
     function LoginComponent() {
+        this.username = '';
+        this.password = '';
     }
     LoginComponent.prototype.ngOnInit = function () {
+    };
+    LoginComponent.prototype.onLogin = function () {
+        Parse.User.logIn(this.username, this.password, {
+            success: function (user) {
+                alert('welcome: ' + user.get('username'));
+            },
+            error: function (user, error) {
+                alert(error.message);
+            }
+        });
     };
     LoginComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Component */])({
@@ -117,7 +130,7 @@ var LoginComponent = (function () {
 /***/ "../../../../../src/app/auth/components/register/register.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-navbar color=\"primary\">\n    <button ion-button menuToggle>\n      <ion-icon name=\"menu\"></ion-icon>\n    </button>\n    <ion-title>Register</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding text-center>\n\n  <ion-list>\n\n    <ion-item>\n      <ion-label floating>Username</ion-label>\n      <ion-input type=\"text\" [(ngModel)]=\"username\"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Email</ion-label>\n      <ion-input type=\"email\" [(ngModel)]=\"email\"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Password</ion-label>\n      <ion-input type=\"password\" [(ngModel)]=\"password\"></ion-input>\n    </ion-item>\n\n    <br>\n    <button (click)=\"onRegister()\" ion-button outline block>Register</button>\n  </ion-list>\n\n\n\n</ion-content>"
+module.exports = "<ion-header>\n  <ion-navbar color=\"primary\">\n    <button ion-button menuToggle>\n      <ion-icon name=\"menu\"></ion-icon>\n    </button>\n    <ion-title>Register</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding text-center>\n\n  <ion-list>\n\n    <ion-item>\n      <ion-label floating>Username</ion-label>\n      <ion-input type=\"text\" [(ngModel)]=\"username\"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Email</ion-label>\n      <ion-input type=\"email\" [(ngModel)]=\"email\"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Password</ion-label>\n      <ion-input type=\"password\" [(ngModel)]=\"password\"></ion-input>\n    </ion-item>\n\n    <br>\n    <button (click)=\"onRegister()\" ion-button outline block>Register</button>\n  </ion-list>\n  \n</ion-content>"
 
 /***/ }),
 
@@ -544,7 +557,7 @@ var homeRoutes = [
 /***/ "../../../../../src/app/root/components/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ion-menu [content]=\"content\">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button menuClose ion-item *ngFor=\"let p of test\" (click)=\"openPage(p)\">\n        {{p.name}}\n      </button>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n\n<ion-nav [root]=\"rootPage\" #content swipeBackEnabled=\"true\"></ion-nav>\n"
+module.exports = "<ion-menu [content]=\"content\">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu {{connectedUsername}}</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n\n    <ion-list>\n      <button menuClose ion-item (click)=\"logout()\">Logout</button>\n    </ion-list>\n\n    <ion-list>\n      <button menuClose ion-item *ngFor=\"let p of pages\" (click)=\"openPage(p)\">\n        {{p.name}}\n      </button>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n\n<ion-nav [root]=\"rootPage\" #content swipeBackEnabled=\"true\"></ion-nav>"
 
 /***/ }),
 
@@ -558,7 +571,6 @@ module.exports = "<ion-menu [content]=\"content\">\n  <ion-header>\n    <ion-too
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__("../../../../ionic-angular/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_native__ = __webpack_require__("../../../../ionic-native/dist/esm/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_components_home_home_component__ = __webpack_require__("../../../../../src/app/home/components/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__home_components_about_about_component__ = __webpack_require__("../../../../../src/app/home/components/about/about.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -573,22 +585,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var Parse = __webpack_require__("../../../../parse/index.js");
 var AppComponent = (function () {
     function AppComponent(platform) {
         this.platform = platform;
         this.rootPage = __WEBPACK_IMPORTED_MODULE_4__home_components_home_home_component__["a" /* HomeComponent */];
-        this.test = __WEBPACK_IMPORTED_MODULE_0__router__["a" /* appRoutes */];
-        this.pages = [
-            { title: 'Home', component: __WEBPACK_IMPORTED_MODULE_4__home_components_home_home_component__["a" /* HomeComponent */] },
-            { title: 'About', component: __WEBPACK_IMPORTED_MODULE_5__home_components_about_about_component__["a" /* AboutComponent */] }
-        ];
+        this.connectedUsername = '';
+        this.pages = __WEBPACK_IMPORTED_MODULE_0__router__["a" /* appRoutes */];
         this.initializeApp();
     }
     AppComponent.prototype.initializeApp = function () {
         Parse.initialize("duffade");
         Parse.serverURL = 'https://duffades.herokuapp.com/parse';
+        if (Parse.User.current()) {
+            this.connectedUsername = Parse.User.current().get('username');
+        }
         this.platform.ready().then(function () {
             __WEBPACK_IMPORTED_MODULE_3_ionic_native__["b" /* StatusBar */].styleDefault();
             __WEBPACK_IMPORTED_MODULE_3_ionic_native__["a" /* Splashscreen */].hide();
@@ -596,6 +607,11 @@ var AppComponent = (function () {
     };
     AppComponent.prototype.openPage = function (page) {
         this.nav.setRoot(page.component);
+    };
+    AppComponent.prototype.logout = function () {
+        Parse.User.logOut().then(function () {
+            alert('you disconnected');
+        });
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_17" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* Nav */]), 
