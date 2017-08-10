@@ -10,6 +10,7 @@ import { IonicModule } from 'ionic-angular';
     CommonModule,
     IonicModule
   ],
-  declarations: [ListComponent, FormComponent]
+  declarations: [ListComponent, FormComponent],
+  entryComponents: [ListComponent, FormComponent]
 })
 export class DuffadesModule { }
