@@ -10,7 +10,7 @@
 <ion-content>
   <ion-list>
 
-    <form novalidate ng-submit="onSubmit()">
+    <form novalidate (submit)="onSubmit()">
 
       <ion-item>
         <ion-input name="title" type="text" placeholder="Titre" [(ngModel)]="duffade.title"  required></ion-input>
