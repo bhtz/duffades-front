@@ -15,7 +15,7 @@ export class ListComponent implements OnInit {
   ngOnInit() {
     var q = new Parse.Query('Duffade');
     q.find().then((duffades) => {
-      this.zone.run(() => { this.duffades = duffades; });;
+      this.zone.run(() => { this.duffades = duffades; });
     });
   }
 
