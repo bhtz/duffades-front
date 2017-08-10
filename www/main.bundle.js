@@ -117,7 +117,7 @@ var LoginComponent = (function () {
 /***/ "../../../../../src/app/auth/components/register/register.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-navbar color=\"primary\">\n    <button ion-button menuToggle>\n      <ion-icon name=\"menu\"></ion-icon>\n    </button>\n    <ion-title>Register</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding text-center>\n\n</ion-content>"
+module.exports = "<ion-header>\n  <ion-navbar color=\"primary\">\n    <button ion-button menuToggle>\n      <ion-icon name=\"menu\"></ion-icon>\n    </button>\n    <ion-title>Register</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding text-center>\n\n  <ion-list>\n\n    <ion-item>\n      <ion-label floating>Username</ion-label>\n      <ion-input type=\"text\" [(ngModel)]=\"username\"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Email</ion-label>\n      <ion-input type=\"email\" [(ngModel)]=\"email\"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Password</ion-label>\n      <ion-input type=\"password\" [(ngModel)]=\"password\"></ion-input>\n    </ion-item>\n\n    <br>\n    <button (click)=\"onRegister()\" ion-button outline block>Register</button>\n  </ion-list>\n\n\n\n</ion-content>"
 
 /***/ }),
 
@@ -144,7 +144,9 @@ module.exports = module.exports.toString();
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_components_home_home_component__ = __webpack_require__("../../../../../src/app/home/components/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__("../../../../ionic-angular/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("../../../core/index.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -155,20 +157,43 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+var Parse = __webpack_require__("../../../../parse/index.js");
 var RegisterComponent = (function () {
-    function RegisterComponent() {
+    function RegisterComponent(navCtrl) {
+        this.navCtrl = navCtrl;
+        this.username = '';
+        this.email = '';
+        this.password = '';
     }
     RegisterComponent.prototype.ngOnInit = function () {
     };
+    RegisterComponent.prototype.onRegister = function () {
+        var self = this;
+        var user = new Parse.User();
+        user.set("username", this.username);
+        user.set("email", this.email);
+        user.set("password", this.password);
+        user.signUp(null, {
+            success: function (user) {
+                self.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_0__home_components_home_home_component__["a" /* HomeComponent */]);
+            },
+            error: function (user, error) {
+                alert("Error: " + error.code + " " + error.message);
+            }
+        });
+    };
     RegisterComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["u" /* Component */])({
             selector: 'app-register',
             template: __webpack_require__("../../../../../src/app/auth/components/register/register.component.html"),
             styles: [__webpack_require__("../../../../../src/app/auth/components/register/register.component.scss")]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === 'function' && _a) || Object])
     ], RegisterComponent);
     return RegisterComponent;
+    var _a;
 }());
 //# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/register.component.js.map
 
