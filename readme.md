@@ -1,11 +1,10 @@
-com.sncf.ionic2
+com.duffade.front
 ===============
 
 Présentation
 ------------
 
-Le starter kit **Ionic 2** est un socle technique de référence permettant l'implémentation d'application **Web mobile & Hybride** de type **"Single Page Application"**.
-Il fournit tout l'outillage nécessaire pour développer une application robuste et performante, en fournissant une expérience développeur évolué (CLI, TypeScript, livereload, scaffolding) et assure la qualité logicielle avec le système intégré de **validation de code source** et de **tests unitaires et fonctionels**.
+todo
 
 Exigences
 ---------
