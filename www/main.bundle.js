@@ -232,7 +232,7 @@ var authRoutes = [
 /***/ "../../../../../src/app/duffades/components/form/form.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\r\n  <ion-navbar color=\"primary\">\r\n    <button ion-button menuToggle>\r\n      <ion-icon name=\"menu\"></ion-icon>\r\n    </button>\r\n    <ion-title>New</ion-title>\r\n  </ion-navbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n  <ion-list>\r\n\r\n    <form novalidate ng-submit=\"onSubmit()\">\r\n\r\n      <ion-item>\r\n        <ion-input name=\"title\" type=\"text\" placeholder=\"Titre\" [(ngModel)]=\"duffade.title\"  required></ion-input>\r\n      </ion-item>\r\n\r\n      <ion-item>\r\n        <ion-input name=\"description\" type=\"text\" placeholder=\"Description\" [(ngModel)]=\"duffade.description\" required></ion-input>\r\n      </ion-item>\r\n\r\n      <button type=\"file\" ion-button color=\"secondary\">Photo</button>\r\n      <button type=\"submit\" ion-button block>Ajouter</button>\r\n    </form>\r\n\r\n  </ion-list>\r\n</ion-content>"
+module.exports = "<ion-header>\r\n  <ion-navbar color=\"primary\">\r\n    <button ion-button menuToggle>\r\n      <ion-icon name=\"menu\"></ion-icon>\r\n    </button>\r\n    <ion-title>New</ion-title>\r\n  </ion-navbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n  <ion-list>\r\n\r\n    <form novalidate (submit)=\"onSubmit()\">\r\n\r\n      <ion-item>\r\n        <ion-input name=\"title\" type=\"text\" placeholder=\"Titre\" [(ngModel)]=\"duffade.title\"  required></ion-input>\r\n      </ion-item>\r\n\r\n      <ion-item>\r\n        <ion-input name=\"description\" type=\"text\" placeholder=\"Description\" [(ngModel)]=\"duffade.description\" required></ion-input>\r\n      </ion-item>\r\n\r\n      <button type=\"file\" ion-button color=\"secondary\">Photo</button>\r\n      <button type=\"submit\" ion-button block>Ajouter</button>\r\n    </form>\r\n\r\n  </ion-list>\r\n</ion-content>"
 
 /***/ }),
 
@@ -303,7 +303,7 @@ var FormComponent = (function () {
 /***/ "../../../../../src/app/duffades/components/list/list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\r\n  <ion-navbar color=\"primary\">\r\n    <button ion-button menuToggle>\r\n      <ion-icon name=\"menu\"></ion-icon>\r\n    </button>\r\n    <ion-title>Mur</ion-title>\r\n  </ion-navbar>\r\n</ion-header>\r\n\r\n<ion-content padding text-center>\r\n  <a href=\"#/duffades/new\" ion-button outline block>New</a>\r\n\r\n  <ion-list>\r\n    <ion-item *ngFor=\"let item of duffades\">\r\n      <ion-avatar item-left>\r\n        <img src=\"http://lorempixel.com/400/200/\">\r\n      </ion-avatar>\r\n      <h2>{{item.get('title')}}</h2>\r\n      <p>{{item.get('description')}}</p>\r\n    </ion-item>\r\n  </ion-list>\r\n</ion-content>"
+module.exports = "<ion-header>\r\n  <ion-navbar color=\"primary\">\r\n    <button ion-button menuToggle>\r\n      <ion-icon name=\"menu\"></ion-icon>\r\n    </button>\r\n    <ion-title>Mur</ion-title>\r\n  </ion-navbar>\r\n</ion-header>\r\n\r\n<ion-content padding text-center>\r\n  <a href=\"#/duffades/new\" ion-button outline block>New</a>\r\n\r\n  <ion-list>\r\n    <ion-item *ngFor=\"let item of duffades\">\r\n      <ion-avatar item-left>\r\n        <img src=\"http://lorempixel.com/400/200/\">\r\n      </ion-avatar>\r\n      <h2>{{item.get('title')}}</h2>\r\n      <p>{{item.get('description')}}</p>\r\n    </ion-item>\r\n  </ion-list>\r\n\r\n</ion-content>"
 
 /***/ }),
 
