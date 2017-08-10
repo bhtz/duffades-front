@@ -50,7 +50,7 @@ var AuthModule = (function () {
     ], AuthModule);
     return AuthModule;
 }());
-//# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/auth.module.js.map
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/auth.module.js.map
 
 /***/ }),
 
@@ -110,7 +110,7 @@ var LoginComponent = (function () {
     ], LoginComponent);
     return LoginComponent;
 }());
-//# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/login.component.js.map
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/login.component.js.map
 
 /***/ }),
 
@@ -144,6 +144,7 @@ module.exports = module.exports.toString();
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterComponent; });
+<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_components_home_home_component__ = __webpack_require__("../../../../../src/app/home/components/home/home.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__("../../../../ionic-angular/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("../../../core/index.js");
@@ -196,6 +197,35 @@ var RegisterComponent = (function () {
     var _a;
 }());
 //# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/register.component.js.map
+=======
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var RegisterComponent = (function () {
+    function RegisterComponent() {
+    }
+    RegisterComponent.prototype.ngOnInit = function () {
+    };
+    RegisterComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Component */])({
+            selector: 'app-register',
+            template: __webpack_require__("../../../../../src/app/auth/components/register/register.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/auth/components/register/register.component.scss")]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], RegisterComponent);
+    return RegisterComponent;
+}());
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/register.component.js.map
+>>>>>>> ea3e7696712c537eb9edaeef5cf261f88dcb27d6
 
 /***/ }),
 
@@ -212,7 +242,187 @@ var authRoutes = [
     { component: __WEBPACK_IMPORTED_MODULE_0__components_login_login_component__["a" /* LoginComponent */], name: 'Login', segment: 'login' },
     { component: __WEBPACK_IMPORTED_MODULE_1__components_register_register_component__["a" /* RegisterComponent */], name: 'Register', segment: 'register' }
 ];
-//# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/router.js.map
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/router.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/duffades/components/form/form.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<ion-header>\n  <ion-navbar color=\"primary\">\n    <button ion-button menuToggle>\n      <ion-icon name=\"menu\"></ion-icon>\n    </button>\n    <ion-title>New</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-list>\n\n  <form novalidate ng-submit=\"onSubmit()\">\n\n    <ion-item>\n      <ion-input type=\"text\" placeholder=\"Titre\" required></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-input type=\"text\" placeholder=\"Description\" required></ion-input>\n    </ion-item>\n\n   <button type=\"file\" ion-button color=\"secondary\">Photo</button>\n    <button type=\"submit\" ion-button block>Ajouter</button>\n  </form>\n\n</ion-list>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/duffades/components/form/form.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/duffades/components/form/form.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FormComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var FormComponent = (function () {
+    function FormComponent() {
+    }
+    FormComponent.prototype.ngOnInit = function () {
+    };
+    FormComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Component */])({
+            selector: 'app-form',
+            template: __webpack_require__("../../../../../src/app/duffades/components/form/form.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/duffades/components/form/form.component.scss")]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], FormComponent);
+    return FormComponent;
+}());
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/form.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/duffades/components/list/list.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<ion-header>\n  <ion-navbar color=\"primary\">\n    <button ion-button menuToggle>\n      <ion-icon name=\"menu\"></ion-icon>\n    </button>\n    <ion-title>Duffades</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<button ion-button icon-only>\n  New\n  <ion-icon name=\"home\"></ion-icon>\n</button>\n\n<ion-list>\n  <ion-item>\n    <ion-thumbnail item-start>\n      <img src=\"img/thumbnail-totoro.png\">\n    </ion-thumbnail>\n    <h2>My Neighbor Totoro</h2>\n    <p>Hayao Miyazaki • 1988</p>\n    <button ion-button clear item-end>View</button>\n  </ion-item>\n</ion-list>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/duffades/components/list/list.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/duffades/components/list/list.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ListComponent = (function () {
+    function ListComponent() {
+    }
+    ListComponent.prototype.ngOnInit = function () {
+    };
+    ListComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Component */])({
+            selector: 'app-list',
+            template: __webpack_require__("../../../../../src/app/duffades/components/list/list.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/duffades/components/list/list.component.scss")]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], ListComponent);
+    return ListComponent;
+}());
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/list.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/duffades/duffades.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DuffadesModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_list_list_component__ = __webpack_require__("../../../../../src/app/duffades/components/list/list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_form_form_component__ = __webpack_require__("../../../../../src/app/duffades/components/form/form.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__("../../../../ionic-angular/index.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var DuffadesModule = (function () {
+    function DuffadesModule() {
+    }
+    DuffadesModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* NgModule */])({
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */],
+                __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["c" /* IonicModule */]
+            ],
+            declarations: [__WEBPACK_IMPORTED_MODULE_2__components_list_list_component__["a" /* ListComponent */], __WEBPACK_IMPORTED_MODULE_3__components_form_form_component__["a" /* FormComponent */]]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], DuffadesModule);
+    return DuffadesModule;
+}());
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/duffades.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/duffades/router.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return duffadesRoutes; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_list_list_component__ = __webpack_require__("../../../../../src/app/duffades/components/list/list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_form_form_component__ = __webpack_require__("../../../../../src/app/duffades/components/form/form.component.ts");
+
+
+var duffadesRoutes = [
+    { component: __WEBPACK_IMPORTED_MODULE_0__components_list_list_component__["a" /* ListComponent */], name: 'Duffades', segment: 'duffades' },
+    { component: __WEBPACK_IMPORTED_MODULE_1__components_form_form_component__["a" /* FormComponent */], name: 'Form', segment: 'form' }
+];
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/router.js.map
 
 /***/ }),
 
@@ -259,14 +469,14 @@ var AboutComponent = (function () {
     return AboutComponent;
     var _a, _b;
 }());
-//# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/about.component.js.map
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/about.component.js.map
 
 /***/ }),
 
 /***/ "../../../../../src/app/home/components/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-navbar color=\"primary\">\n    <button ion-button menuToggle>\n      <ion-icon name=\"menu\"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding text-center>\nBienvenue dans Duffades\n\n</ion-content>"
+module.exports = "<ion-header>\n  <ion-navbar color=\"primary\">\n    <button ion-button menuToggle>\n      <ion-icon name=\"menu\"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding text-center>\n  Bienvenue dans Duffades\n\n  <br/>\n\n  <a ion-button icon-only href=\"#/duffades\">\n    Duffades\n</a>\n</ion-content>"
 
 /***/ }),
 
@@ -301,7 +511,7 @@ var HomeComponent = (function () {
     return HomeComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/home.component.js.map
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/home.component.js.map
 
 /***/ }),
 
@@ -340,7 +550,7 @@ var HomeModule = (function () {
     ], HomeModule);
     return HomeModule;
 }());
-//# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/home.module.js.map
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/home.module.js.map
 
 /***/ }),
 
@@ -357,7 +567,7 @@ var homeRoutes = [
     { component: __WEBPACK_IMPORTED_MODULE_0__components_home_home_component__["a" /* HomeComponent */], name: 'Home', segment: 'home' },
     { component: __WEBPACK_IMPORTED_MODULE_1__components_about_about_component__["a" /* AboutComponent */], name: 'About', segment: 'about' }
 ];
-//# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/router.js.map
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/router.js.map
 
 /***/ }),
 
@@ -430,7 +640,7 @@ var AppComponent = (function () {
     return AppComponent;
     var _a, _b;
 }());
-//# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/app.component.js.map
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/app.component.js.map
 
 /***/ }),
 
@@ -444,7 +654,8 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__router__ = __webpack_require__("../../../../../src/app/root/router.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home_module__ = __webpack_require__("../../../../../src/app/home/home.module.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__auth_auth_module__ = __webpack_require__("../../../../../src/app/auth/auth.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_app_component__ = __webpack_require__("../../../../../src/app/root/components/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__duffades_duffades_module__ = __webpack_require__("../../../../../src/app/duffades/duffades.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_app_component__ = __webpack_require__("../../../../../src/app/root/components/app.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -460,22 +671,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* NgModule */])({
-            declarations: [__WEBPACK_IMPORTED_MODULE_5__components_app_component__["a" /* AppComponent */]],
-            imports: [__WEBPACK_IMPORTED_MODULE_3__home_home_module__["a" /* HomeModule */], __WEBPACK_IMPORTED_MODULE_4__auth_auth_module__["a" /* AuthModule */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__components_app_component__["a" /* AppComponent */], { mode: 'md' }, { links: __WEBPACK_IMPORTED_MODULE_2__router__["a" /* appRoutes */] })],
+            declarations: [__WEBPACK_IMPORTED_MODULE_6__components_app_component__["a" /* AppComponent */]],
+            imports: [__WEBPACK_IMPORTED_MODULE_3__home_home_module__["a" /* HomeModule */], __WEBPACK_IMPORTED_MODULE_4__auth_auth_module__["a" /* AuthModule */], __WEBPACK_IMPORTED_MODULE_5__duffades_duffades_module__["a" /* DuffadesModule */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__components_app_component__["a" /* AppComponent */], { mode: 'md' }, { links: __WEBPACK_IMPORTED_MODULE_2__router__["a" /* appRoutes */] })],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* IonicApp */]],
-            entryComponents: [__WEBPACK_IMPORTED_MODULE_5__components_app_component__["a" /* AppComponent */]],
+            entryComponents: [__WEBPACK_IMPORTED_MODULE_6__components_app_component__["a" /* AppComponent */]],
             providers: [{ provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* IonicErrorHandler */] }]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);
     return AppModule;
 }());
-//# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/root.module.js.map
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/root.module.js.map
 
 /***/ }),
 
@@ -486,10 +698,12 @@ var AppModule = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return appRoutes; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__auth_router__ = __webpack_require__("../../../../../src/app/auth/router.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_router__ = __webpack_require__("../../../../../src/app/home/router.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__duffades_router__ = __webpack_require__("../../../../../src/app/duffades/router.ts");
 
 
-var appRoutes = __WEBPACK_IMPORTED_MODULE_1__home_router__["a" /* homeRoutes */].concat(__WEBPACK_IMPORTED_MODULE_0__auth_router__["a" /* authRoutes */]);
-//# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/router.js.map
+
+var appRoutes = __WEBPACK_IMPORTED_MODULE_1__home_router__["a" /* homeRoutes */].concat(__WEBPACK_IMPORTED_MODULE_2__duffades_router__["a" /* duffadesRoutes */], __WEBPACK_IMPORTED_MODULE_0__auth_router__["a" /* authRoutes */]);
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/router.js.map
 
 /***/ }),
 
@@ -505,7 +719,7 @@ var appRoutes = __WEBPACK_IMPORTED_MODULE_1__home_router__["a" /* homeRoutes */]
 var environment = {
     production: false
 };
-//# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/environment.js.map
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/environment.js.map
 
 /***/ }),
 
@@ -529,7 +743,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
     .bootstrapModule(__WEBPACK_IMPORTED_MODULE_3__app_root_root_module__["a" /* AppModule */])
     .then(function (success) { return console.log("Bootstrap success"); })
     .catch(function (error) { return console.log(error); });
-//# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/main.js.map
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/main.js.map
 
 /***/ }),
 

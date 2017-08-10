@@ -3,6 +3,24 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Duffades</ion-title>
+    <ion-title>New</ion-title>
   </ion-navbar>
 </ion-header>
+
+<ion-list>
+
+  <form novalidate ng-submit="onSubmit()">
+
+    <ion-item>
+      <ion-input type="text" placeholder="Titre" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Description" required></ion-input>
+    </ion-item>
+
+   <button type="file" ion-button color="secondary">Photo</button>
+    <button type="submit" ion-button block>Ajouter</button>
+  </form>
+
+</ion-list>
