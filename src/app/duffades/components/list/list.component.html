@@ -3,22 +3,20 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Duffades</ion-title>
+    <ion-title>Mur</ion-title>
   </ion-navbar>
 </ion-header>
 
-<button ion-button icon-only>
-  New
-  <ion-icon name="home"></ion-icon>
-</button>
+<ion-content padding text-center>
+  <a href="#/duffades/new" ion-button outline block>New</a>
 
-<ion-list>
-  <ion-item>
-    <ion-thumbnail item-start>
-      <img src="img/thumbnail-totoro.png">
-    </ion-thumbnail>
-    <h2>My Neighbor Totoro</h2>
-    <p>Hayao Miyazaki • 1988</p>
-    <button ion-button clear item-end>View</button>
-  </ion-item>
-</ion-list>
+  <ion-list>
+    <ion-item *ngFor="let item of duffades">
+      <ion-avatar item-left>
+        <img src="http://lorempixel.com/400/200/">
+      </ion-avatar>
+      <h2>{{item.get('title')}}</h2>
+      <p>{{item.get('description')}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
+var Parse = require('parse');
 
 @Component({
   selector: 'app-list',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+  duffades: Array<any> = [];
+
+  constructor(private zone: NgZone) { }
 
   ngOnInit() {
+    var q = new Parse.Query('Duffade');
+    q.find().then((duffades) => {
+      this.zone.run(() => { this.duffades = duffades; });;
+    });
   }
 
 }
