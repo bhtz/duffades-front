@@ -24,8 +24,6 @@ export class FormComponent implements OnInit {
     var duffade = new Parse.Object('Duffade');
     duffade.set("title", this.duffade.title);
     duffade.set("description", this.duffade.description);
-
-
     duffade.save().then(() => alert('save'));
   }
 
