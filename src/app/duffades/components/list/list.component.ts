@@ -21,7 +21,10 @@ export class ListComponent implements OnInit {
   }
 
   goDetail(duffade:any){
-    
+  }
+  
+  ionViewCanEnter() {
+    return Parse.User.current() != null;
   }
 
 }

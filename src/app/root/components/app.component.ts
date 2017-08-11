@@ -17,9 +17,10 @@ export class AppComponent {
   rootPage: any = HomeComponent;
   pages: Array<any>;
   connectedUsername: string = '';
+  isAuthenticated: boolean = false;
 
   constructor(public platform: Platform) {
-    this.pages = appRoutes;
+    this.pages = appRoutes.filter((item: any)=> item.menu == true );
     this.initializeApp();
   }
 
@@ -28,6 +29,7 @@ export class AppComponent {
     Parse.serverURL = 'https://duffades.herokuapp.com/parse';
 
     if(Parse.User.current()){
+      this.isAuthenticated = true;
       this.connectedUsername = Parse.User.current().get('username');
     }
 

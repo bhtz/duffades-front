@@ -1,0 +1,28 @@
+.inputFile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.labelFile {
+    padding: 0.625rem 1.25rem;
+    color: #722040;
+    border: 2px solid currentColor;
+    font-size: 1.25rem;
+    font-weight: 700;
+    display: inline-block;
+    cursor: pointer;
+    width: 100%;
+
+    svg {
+        width: 1em;
+        height: 1em;
+        vertical-align: middle;
+        fill: currentColor;
+        margin-top: -0.25em;
+        margin-right: 0.25em;
+    }
+}
