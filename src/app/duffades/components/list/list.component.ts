@@ -1,5 +1,5 @@
 import { Component, OnInit, NgZone } from '@angular/core';
-import { Duffade } from "app/duffades/models/user";
+import { Duffade } from "app/duffades/models/duffade";
 var Parse = require('parse');
 
 @Component({
