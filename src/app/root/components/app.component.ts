@@ -1,10 +1,8 @@
+import { ListComponent } from './../../duffades/components/list/list.component';
 import { appRoutes } from './../router';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
-
-import { HomeComponent } from '../../home/components/home/home.component';
-import { AboutComponent } from '../../home/components/about/about.component';
 
 var Parse = require('parse');
 
@@ -14,7 +12,7 @@ var Parse = require('parse');
 export class AppComponent {
 
   @ViewChild(Nav) nav: Nav;
-  rootPage: any = HomeComponent;
+  rootPage: any = ListComponent;
   pages: Array<any>;
   connectedUsername: string = '';
   isAuthenticated: boolean = false;

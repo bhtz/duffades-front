@@ -8,46 +8,30 @@
 </ion-header>
 
 <ion-content padding text-center>
-  <a href="#/duffades/new" ion-button outline block>New</a>
+
+  <ion-refresher (ionRefresh)="activate($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-fab right bottom>
+    <a href="#/duffades/new" ion-fab color="primary"><ion-icon name="add"></ion-icon></a>
+  </ion-fab>
 
   <ion-list>
     <ion-card *ngFor="let item of duffades">
 
       <ion-item>
-        <ion-avatar item-start>
-          <img src="{{item.get('author').get('picture')}}">
+        <ion-avatar item-left>
+          <img src="{{item.get('target').get('picture').url()}}" title="{{item.get('target').get('username')}}">
         </ion-avatar>
-        <h2>{{item.get('author').get('name')}}</h2>
-        <p>November 5, 1955</p>
+        <h2>{{item.get('title')}}</h2>
+        <p>By {{item.get('author').get('username')}}</p>
       </ion-item>
 
-      <img src="{{item.get('picture').url()}}" width="100%">
-
       <ion-card-content>
-        <h2> {{item.get('title')}}</h2>
         <p>{{item.get('description')}}</p>
-
+        <img src="{{item.get('picture').url()}}">
       </ion-card-content>
-
-      <ion-row>
-        <ion-col>
-          <button ion-button icon-left clear small>
-        <ion-icon name="thumbs-up"></ion-icon>
-        <div>12 Likes</div>
-      </button>
-        </ion-col>
-        <ion-col>
-          <button ion-button icon-left clear small>
-        <ion-icon name="text"></ion-icon>
-        <div>4 Comments</div>
-      </button>
-        </ion-col>
-        <ion-col center text-center>
-          <ion-note>
-            11h ago
-          </ion-note>
-        </ion-col>
-      </ion-row>
     </ion-card>
   </ion-list>
 
