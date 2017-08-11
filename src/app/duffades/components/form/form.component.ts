@@ -37,8 +37,12 @@ export class FormComponent implements OnInit {
       var parseFile = new Parse.File(this.duffade.picture.name, this.duffade.picture)
       duffade.set("picture", parseFile);
     }
-    
+
     duffade.save().then(() => alert('save'));
+  }
+
+  ionViewCanEnter() {
+    return Parse.User.current() != null;
   }
 
 }

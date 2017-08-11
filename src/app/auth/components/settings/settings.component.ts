@@ -33,4 +33,8 @@ export class SettingsComponent implements OnInit {
     console.log(this.file);
   }
 
+  ionViewCanEnter() {
+    return Parse.User.current() != null;
+  }
+
 }

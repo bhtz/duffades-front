@@ -20,4 +20,8 @@ export class ListComponent implements OnInit {
     });
   }
 
+  ionViewCanEnter() {
+    return Parse.User.current() != null;
+  }
+
 }
