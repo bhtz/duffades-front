@@ -1,13 +1,13 @@
 <ion-menu [content]="content">
   <ion-header>
     <ion-toolbar>
-      <ion-title>Menu {{connectedUsername}}</ion-title>
+      <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-content>
 
-    <ion-list>
+    <ion-list *ngIf="isAuthenticated">
       <button menuClose ion-item (click)="logout()">Logout</button>
     </ion-list>
 

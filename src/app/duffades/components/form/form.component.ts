@@ -31,6 +31,7 @@ export class FormComponent implements OnInit {
     var duffade = new Parse.Object('Duffade');
     duffade.set("title", this.duffade.title);
     duffade.set("description", this.duffade.description);
+    duffade.set('author', Parse.User.current());
 
     if (this.duffade.picture) {
       var parseFile = new Parse.File(this.duffade.picture.name, this.duffade.picture)
