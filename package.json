@@ -42,6 +42,7 @@
   "devDependencies": {
     "@angular/cli": "^1.0.0-beta.32.3",
     "@angular/compiler-cli": "2.3.1",
+    "@ionic/cli-plugin-ionic-angular": "1.4.1",
     "@types/gulp": "^3.8.32",
     "@types/jasmine": "2.5.38",
     "@types/jquery": "^2.0.40",
@@ -49,6 +50,7 @@
     "codelyzer": "~2.0.0-beta.1",
     "compodoc": "0.0.41",
     "gulp": "^3.9.1",
+    "ionic": "3.7.0",
     "jasmine-core": "2.5.2",
     "jasmine-spec-reporter": "2.5.0",
     "karma": "1.2.0",
