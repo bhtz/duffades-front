@@ -1,4 +1,4 @@
-import { ListComponent } from './../../duffades/components/list/list.component';
+import { HomeComponent } from './../../home/components/home/home.component';
 import { appRoutes } from './../router';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
@@ -12,7 +12,7 @@ var Parse = require('parse');
 export class AppComponent {
 
   @ViewChild(Nav) nav: Nav;
-  rootPage: any = ListComponent;
+  rootPage: any = HomeComponent;
   pages: Array<any>;
   connectedUsername: string = '';
   isAuthenticated: boolean = false;

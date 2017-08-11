@@ -718,7 +718,7 @@ module.exports = "<ion-menu [content]=\"content\">\n  <ion-header>\n    <ion-too
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__duffades_components_list_list_component__ = __webpack_require__("../../../../../src/app/duffades/components/list/list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_components_home_home_component__ = __webpack_require__("../../../../../src/app/home/components/home/home.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__router__ = __webpack_require__("../../../../../src/app/root/router.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("../../../core/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__("../../../../ionic-angular/index.js");
@@ -741,7 +741,7 @@ var Parse = __webpack_require__("../../../../parse/index.js");
 var AppComponent = (function () {
     function AppComponent(platform) {
         this.platform = platform;
-        this.rootPage = __WEBPACK_IMPORTED_MODULE_0__duffades_components_list_list_component__["a" /* ListComponent */];
+        this.rootPage = __WEBPACK_IMPORTED_MODULE_0__home_components_home_home_component__["a" /* HomeComponent */];
         this.connectedUsername = '';
         this.isAuthenticated = false;
         this.pages = __WEBPACK_IMPORTED_MODULE_1__router__["a" /* appRoutes */].filter(function (item) { return item.menu == true; });
