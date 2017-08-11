@@ -20,4 +20,8 @@ export class ListComponent implements OnInit {
     });
   }
 
+  goDetail(duffade:any){
+    
+  }
+
 }
