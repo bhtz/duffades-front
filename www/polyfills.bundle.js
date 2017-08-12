@@ -70,7 +70,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 // NgClass on SVG elements
 // Needed for: IE10, IE11
 // import 'classlist.js';
-//# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/polyfills.js.map
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/polyfills.js.map
 
 /***/ }),
 

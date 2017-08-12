@@ -52,7 +52,7 @@ var AuthModule = (function () {
     ], AuthModule);
     return AuthModule;
 }());
-//# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/auth.module.js.map
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/auth.module.js.map
 
 /***/ }),
 
@@ -125,7 +125,7 @@ var LoginComponent = (function () {
     ], LoginComponent);
     return LoginComponent;
 }());
-//# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/login.component.js.map
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/login.component.js.map
 
 /***/ }),
 
@@ -210,7 +210,7 @@ var RegisterComponent = (function () {
     return RegisterComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/register.component.js.map
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/register.component.js.map
 
 /***/ }),
 
@@ -291,7 +291,7 @@ var SettingsComponent = (function () {
     return SettingsComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/settings.component.js.map
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/settings.component.js.map
 
 /***/ }),
 
@@ -311,14 +311,14 @@ var authRoutes = [
     { component: __WEBPACK_IMPORTED_MODULE_2__components_register_register_component__["a" /* RegisterComponent */], name: 'Register', segment: 'register', menu: true },
     { component: __WEBPACK_IMPORTED_MODULE_0__components_settings_settings_component__["a" /* SettingsComponent */], name: 'Settings', segment: 'settings', menu: true }
 ];
-//# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/router.js.map
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/router.js.map
 
 /***/ }),
 
 /***/ "../../../../../src/app/duffades/components/form/form.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\r\n  <ion-navbar color=\"primary\">\r\n    <button ion-button menuToggle>\r\n      <ion-icon name=\"menu\"></ion-icon>\r\n    </button>\r\n    <ion-title>New</ion-title>\r\n  </ion-navbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n  <ion-list>\r\n\r\n    <form id=\"form-duffade\" novalidate (submit)=\"onSubmit()\">\r\n\r\n      <ion-item>\r\n        <ion-input name=\"title\" type=\"text\" placeholder=\"Titre\" [(ngModel)]=\"duffade.title\" required></ion-input>\r\n      </ion-item>\r\n\r\n      <ion-item>\r\n        <ion-input name=\"description\" type=\"text\" placeholder=\"Description\" [(ngModel)]=\"duffade.description\" required></ion-input>\r\n      </ion-item>\r\n\r\n      <ion-item>\r\n        <input type=\"file\" id=\"inputFile\" class=\"inputFile\" accept=\"image/*\" (change)=\"onChangePhoto($event)\" />\r\n        <label for=\"inputFile\" class=\"labelFile\">\r\n            <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"17\" viewBox=\"0 0 20 17\"><path d=\"M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z\"/></svg> \r\n             <span>Photo</span>\r\n        </label>\r\n      </ion-item>\r\n\r\n      <ion-item>\r\n        <button type=\"submit\" ion-button block outline>Save</button>\r\n      </ion-item>\r\n    </form>\r\n\r\n  </ion-list>\r\n</ion-content>"
+module.exports = "<ion-header>\n  <ion-navbar color=\"primary\">\n    <button ion-button menuToggle>\n      <ion-icon name=\"menu\"></ion-icon>\n    </button>\n    <ion-title>New</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n\n    <form id=\"form-duffade\" novalidate (submit)=\"onSubmit()\">\n\n      <ion-item>\n        <ion-input name=\"title\" type=\"text\" placeholder=\"Titre\" [(ngModel)]=\"duffade.title\" required></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <ion-input name=\"description\" type=\"text\" placeholder=\"Description\" [(ngModel)]=\"duffade.description\" required></ion-input>\n      </ion-item>\n\n      <ion-item>\n        <input type=\"file\" id=\"inputFile\" class=\"inputFile\" accept=\"image/*\" (change)=\"onChangePhoto($event)\" />\n        <label for=\"inputFile\" class=\"labelFile\">\n            <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"17\" viewBox=\"0 0 20 17\"><path d=\"M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z\"/></svg> \n             <span>Photo</span>\n        </label>\n      </ion-item>\n\n      <ion-item>\n        <button type=\"submit\" ion-button block outline>Save</button>\n      </ion-item>\n    </form>\n\n  </ion-list>\n</ion-content>"
 
 /***/ }),
 
@@ -396,14 +396,14 @@ var FormComponent = (function () {
     ], FormComponent);
     return FormComponent;
 }());
-//# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/form.component.js.map
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/form.component.js.map
 
 /***/ }),
 
 /***/ "../../../../../src/app/duffades/components/list/list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\r\n  <ion-navbar color=\"primary\">\r\n    <button ion-button menuToggle>\r\n      <ion-icon name=\"menu\"></ion-icon>\r\n    </button>\r\n    <ion-title>Mur</ion-title>\r\n  </ion-navbar>\r\n</ion-header>\r\n\r\n<ion-content padding text-center>\r\n\r\n  <ion-refresher (ionRefresh)=\"activate($event)\">\r\n    <ion-refresher-content></ion-refresher-content>\r\n  </ion-refresher>\r\n\r\n  <ion-fab right bottom>\r\n    <a href=\"#/duffades/new\" ion-fab color=\"primary\"><ion-icon name=\"add\"></ion-icon></a>\r\n  </ion-fab>\r\n\r\n  <ion-list>\r\n    <ion-card *ngFor=\"let item of duffades\">\r\n\r\n      <ion-item>\r\n        <ion-avatar item-left>\r\n          <img src=\"{{item.get('target').get('picture').url()}}\" title=\"{{item.get('target').get('username')}}\">\r\n        </ion-avatar>\r\n        <h2>{{item.get('title')}}</h2>\r\n        <p>By {{item.get('author').get('username')}}</p>\r\n      </ion-item>\r\n\r\n      <ion-card-content>\r\n        <p>{{item.get('description')}}</p>\r\n        <img src=\"{{item.get('picture').url()}}\">\r\n      </ion-card-content>\r\n    </ion-card>\r\n  </ion-list>\r\n\r\n</ion-content>"
+module.exports = "<ion-header>\n  <ion-navbar color=\"primary\">\n    <button ion-button menuToggle>\n      <ion-icon name=\"menu\"></ion-icon>\n    </button>\n    <ion-title>Mur</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding text-center>\n\n  <ion-refresher (ionRefresh)=\"activate($event)\">\n    <ion-refresher-content></ion-refresher-content>\n  </ion-refresher>\n\n  <ion-fab right bottom>\n    <a href=\"#/duffades/new\" ion-fab color=\"primary\"><ion-icon name=\"add\"></ion-icon></a>\n  </ion-fab>\n\n  <ion-list>\n    <ion-card *ngFor=\"let item of duffades\">\n\n      <ion-item>\n        <ion-avatar item-left>\n          <img src=\"{{item.get('target').get('picture').url()}}\" title=\"{{item.get('target').get('username')}}\">\n        </ion-avatar>\n        <h2>{{item.get('title')}}</h2>\n        <p>By {{item.get('author').get('username')}}</p>\n      </ion-item>\n\n      <ion-card-content>\n        <p>{{item.get('description')}}</p>\n        <img src=\"{{item.get('picture').url()}}\">\n      </ion-card-content>\n    </ion-card>\n  </ion-list>\n\n</ion-content>"
 
 /***/ }),
 
@@ -482,7 +482,7 @@ var ListComponent = (function () {
     return ListComponent;
     var _a, _b;
 }());
-//# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/list.component.js.map
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/list.component.js.map
 
 /***/ }),
 
@@ -526,7 +526,7 @@ var DuffadesModule = (function () {
     ], DuffadesModule);
     return DuffadesModule;
 }());
-//# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/duffades.module.js.map
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/duffades.module.js.map
 
 /***/ }),
 
@@ -540,7 +540,7 @@ var Duffade = (function () {
     }
     return Duffade;
 }());
-//# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/duffade.js.map
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/duffade.js.map
 
 /***/ }),
 
@@ -557,7 +557,7 @@ var duffadesRoutes = [
     { component: __WEBPACK_IMPORTED_MODULE_0__components_list_list_component__["a" /* ListComponent */], name: 'Duffades', segment: 'duffades', menu: true },
     { component: __WEBPACK_IMPORTED_MODULE_1__components_form_form_component__["a" /* FormComponent */], name: 'Form', segment: 'duffades/new' }
 ];
-//# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/router.js.map
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/router.js.map
 
 /***/ }),
 
@@ -604,14 +604,14 @@ var AboutComponent = (function () {
     return AboutComponent;
     var _a, _b;
 }());
-//# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/about.component.js.map
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/about.component.js.map
 
 /***/ }),
 
 /***/ "../../../../../src/app/home/components/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\r\n  <ion-navbar color=\"primary\">\r\n    <button ion-button menuToggle>\r\n      <ion-icon name=\"menu\"></ion-icon>\r\n    </button>\r\n    <ion-title>Home</ion-title>\r\n  </ion-navbar>\r\n</ion-header>\r\n\r\n<ion-content padding text-center>\r\n  Bienvenue dans Duffades\r\n\r\n  <br/>\r\n\r\n  <a ion-button icon-only href=\"#/duffades\">\r\n    Duffades\r\n</a>\r\n</ion-content>"
+module.exports = "<ion-header>\n  <ion-navbar color=\"primary\">\n    <button ion-button menuToggle>\n      <ion-icon name=\"menu\"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding text-center>\n  Bienvenue dans Duffades\n\n  <br/>\n\n  <a ion-button icon-only href=\"#/duffades\">\n    Duffades\n</a>\n</ion-content>"
 
 /***/ }),
 
@@ -646,7 +646,7 @@ var HomeComponent = (function () {
     return HomeComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/home.component.js.map
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/home.component.js.map
 
 /***/ }),
 
@@ -685,7 +685,7 @@ var HomeModule = (function () {
     ], HomeModule);
     return HomeModule;
 }());
-//# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/home.module.js.map
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/home.module.js.map
 
 /***/ }),
 
@@ -702,7 +702,7 @@ var homeRoutes = [
     { component: __WEBPACK_IMPORTED_MODULE_0__components_home_home_component__["a" /* HomeComponent */], name: 'Home', segment: 'home' },
     { component: __WEBPACK_IMPORTED_MODULE_1__components_about_about_component__["a" /* AboutComponent */], name: 'About', segment: 'about' }
 ];
-//# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/router.js.map
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/router.js.map
 
 /***/ }),
 
@@ -780,7 +780,7 @@ var AppComponent = (function () {
     return AppComponent;
     var _a, _b;
 }());
-//# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/app.component.js.map
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/app.component.js.map
 
 /***/ }),
 
@@ -827,7 +827,7 @@ var AppModule = (function () {
     ], AppModule);
     return AppModule;
 }());
-//# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/root.module.js.map
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/root.module.js.map
 
 /***/ }),
 
@@ -843,7 +843,7 @@ var AppModule = (function () {
 
 
 var appRoutes = __WEBPACK_IMPORTED_MODULE_1__home_router__["a" /* homeRoutes */].concat(__WEBPACK_IMPORTED_MODULE_2__duffades_router__["a" /* duffadesRoutes */], __WEBPACK_IMPORTED_MODULE_0__auth_router__["a" /* authRoutes */]);
-//# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/router.js.map
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/router.js.map
 
 /***/ }),
 
@@ -859,7 +859,7 @@ var appRoutes = __WEBPACK_IMPORTED_MODULE_1__home_router__["a" /* homeRoutes */]
 var environment = {
     production: false
 };
-//# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/environment.js.map
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/environment.js.map
 
 /***/ }),
 
@@ -883,7 +883,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
     .bootstrapModule(__WEBPACK_IMPORTED_MODULE_3__app_root_root_module__["a" /* AppModule */])
     .then(function (success) { return console.log("Bootstrap success"); })
     .catch(function (error) { return console.log(error); });
-//# sourceMappingURL=D:/Profiles/bheintz/Documents/workspace/github/duffades/duffades-front/src/main.js.map
+//# sourceMappingURL=C:/Users/ta/Documents/Thomas/Workspace/Github/duffades-front/src/main.js.map
 
 /***/ }),
 
