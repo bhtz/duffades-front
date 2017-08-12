@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LoadingController } from 'ionic-angular';
+
 import { Duffade } from "app/duffades/models/duffade";
 var Parse = require('parse');
 
@@ -13,7 +15,7 @@ export class FormComponent implements OnInit {
   duffade: Duffade;
 
 
-  constructor() { }
+  constructor(public loadingCtrl: LoadingController) { }
 
   ngOnInit() {
     this.duffade = new Duffade();
@@ -38,11 +40,23 @@ export class FormComponent implements OnInit {
       duffade.set("picture", parseFile);
     }
 
-    duffade.save().then(() => alert('save'));
+    let loader = this.loadingCtrl.create({
+      content: 'Please wait...',
+    });
+
+
+    loader.present().then(() => {
+      duffade.save().then(() =>
+        loader.dismiss()
+      );
+    });
+
+
   }
 
   ionViewCanEnter() {
     return Parse.User.current() != null;
   }
+
 
 }
